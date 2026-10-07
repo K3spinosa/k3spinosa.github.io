@@ -1,5 +1,5 @@
 /* ===== Config — edit these ===== */
-const CONTACT_EMAIL = "info@elevateinsadvisors.com"; // "send by email" link opens a pre-filled email to this address
+const CONTACT_EMAIL = "support@elevateinsadvisors.com"; // "send by email" link opens a pre-filled email to this address
 
 /* ===== Spanish-first site =====
    Spanish lives in the HTML itself (captured below as ES).
@@ -91,7 +91,7 @@ const MSG = {
       missing:"Please fill in your name, phone / WhatsApp, and preferred day & time.",
       badEmail:"Please check your email address (it's optional).",
       okWa:"Opening WhatsApp… if it doesn't open, message us at (407) 954-1534.",
-      okMail:"Opening your email app… if nothing happens, write to info@elevateinsadvisors.com.",
+      okMail:"Opening your email app… if nothing happens, write to support@elevateinsadvisors.com.",
       intro:"Hi, I'd like to request a meeting.", subj:"Meeting request",
       labels:["Name","Phone","Email","Preferred time","Message"]},
   es:{people:(n)=>`Basado en ${n} ${n===1?"persona":"personas"} · lógica de ejemplo`,
@@ -105,7 +105,7 @@ const MSG = {
       missing:"Por favor completa tu nombre, teléfono / WhatsApp y el día y horario preferido.",
       badEmail:"Revisa tu correo electrónico (es opcional).",
       okWa:"Abriendo WhatsApp… si no se abre, escríbenos al (407) 954-1534.",
-      okMail:"Abriendo tu app de correo… si no pasa nada, escríbenos a info@elevateinsadvisors.com.",
+      okMail:"Abriendo tu app de correo… si no pasa nada, escríbenos a support@elevateinsadvisors.com.",
       intro:"Hola, quiero solicitar una reunión.", subj:"Solicitud de reunión",
       labels:["Nombre","Teléfono","Email","Horario preferido","Mensaje"]}
 };
