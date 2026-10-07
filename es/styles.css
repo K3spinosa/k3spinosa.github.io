@@ -269,4 +269,17 @@ input.invalid{border-color:#b3321a;background:#FFF7F5}
 .values__ic svg{width:19px;height:19px}
 @media (min-width:960px){.values{margin:0}}
 
-@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+/* ===== /es additions: WhatsApp ===== */
+.wa-ic{fill:currentColor;stroke:none;flex:none}
+.btn .wa-ic{width:1.15em;height:1.15em}
+.btn--wa-green .wa-ic{color:#25D366}
+.cta__info .cta__info--wa{font-size:1.02rem;font-weight:600}
+.cta__info .cta__info--wa .wa-ic{width:20px;height:20px;color:#25D366}
+.wa-fab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:100;width:60px;height:60px;border-radius:50%;
+  display:grid;place-items:center;background:var(--navy-dd);color:#25D366;border:2px solid var(--teal);box-shadow:0 12px 28px rgba(8,25,46,.35),0 0 0 6px var(--teal-glow);transition:transform .15s}
+.wa-fab:hover{transform:translateY(-2px) scale(1.04)}
+.wa-fab .wa-ic{width:30px;height:30px}
+.footer{padding-bottom:6rem}
+@media (max-width:480px){.wa-fab{width:56px;height:56px}.wa-fab .wa-ic{width:28px;height:28px}}
+
+@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}html{scroll-behavior:auto}.btn,.wa-fab{transition:none}}

@@ -5,11 +5,11 @@ const CONTACT_EMAIL = "info@elevateinsadvisors.com"; // form opens a pre-filled 
    Spanish lives in the HTML itself (captured below as ES).
    English translations are defined here (EN). */
 const EN = {
-  "nav.health":"Health","nav.estimate":"Quick estimate","nav.life":"Life","nav.about":"About us","nav.cta":"Book a call","nav.tag":"Health &amp; life insurance",
+  "nav.health":"Health","nav.estimate":"Quick estimate","nav.life":"Life","nav.about":"About us","nav.cta":"WhatsApp","nav.tag":"Health &amp; life insurance",
   "hero.eyebrow":"Licensed agents · Health &amp; life insurance",
   "hero.title":"Coverage that finally <em>makes sense</em>.",
   "hero.sub":"Insurance shouldn't feel like homework. We compare plans from top carriers, explain them in plain language, and help you pick what fits your family and your budget.",
-  "hero.cta1":"Book a free consult","hero.cta2":"Try the quick estimate",
+  "hero.cta1":"Message us on WhatsApp","hero.cta2":"Try the quick estimate",
   "hero.b1":"Licensed &amp; appointed","hero.b2":"No cost to you","hero.b3":"Multiple carriers",
   "hero.lang.t":"Se habla español","hero.lang":"Help in Spanish or English","hero.badge":"Licensed in 29 states",
   "promise.kicker":"Our promise","promise.title":"Your coverage, made simple",
@@ -33,10 +33,10 @@ const EN = {
   "est.type.aca":"ACA Marketplace","est.type.private":"Private health plan","est.btn":"Show my estimate",
   "est.result":"Illustrative monthly estimate","est.empty":"Enter your ages and income to see your estimate.",
   "est.l1":"Tax credit estimated from your income","est.l2":"Medicaid and private-plan guidance when it fits","est.l3":"Real quotes in Spanish or English","est.after":"ACA Marketplace, after tax credit",
-  "est.income":"Annual household income","est.income.help":"Your expected income for the coverage year (MAGI). Used to estimate Marketplace tax credits.","est.next":"Get my real quote",
+  "est.income":"Annual household income","est.income.help":"Your expected income for the coverage year (MAGI). Used to estimate Marketplace tax credits.","est.next":"Get your real quote on WhatsApp",
   "est.disclaimer":"<strong>Illustrative estimate only — not a quote or offer of coverage.</strong> Actual premiums depend on your location, income, plan, carrier, tobacco use, and eligibility for subsidies. Actual subsidies depend on your location, the plans available to you, and your final income for the year. Tax-credit math uses the 2025 federal poverty guidelines and the IRS 2026 applicable-percentage table (the enhanced credits expired after 2025).",
   "how.title":"Simple from start to finish",
-  "how.s1.title":"We chat","how.s1.text":"A relaxed call or message. You share your needs, doctors, and budget — we listen.",
+  "how.s1.title":"We chat","how.s1.text":"Send us a WhatsApp message, no rush. You share your needs, doctors, and budget — we listen.",
   "how.s2.title":"We find your options","how.s2.text":"We compare plans across carriers and walk you through the best matches, trade-offs included.",
   "how.s3.title":"You're covered","how.s3.text":"We handle the paperwork and enrollment, then stay available for questions all year.",
   "life.eyebrow":"Life insurance","life.title":"Protect the people who count on you","life.sub":"Peace of mind that your family is taken care of, whatever life brings.",
@@ -47,14 +47,15 @@ const EN = {
   "life.c3.title":"Final Expense","life.c3.text":"Smaller, simple policies that cover funeral costs so your loved ones aren't burdened.",
   "life.c3.t1":"Simplified approval","life.c3.t2":"Fixed premiums",
   "values.v1":"Transparency","values.v2":"You come first","values.v3":"No pressure","values.v4":"All year long",
-  "about.eyebrow":"About us","about.title":"Transparency, and you always come first","about.cta1":"Book a call","about.cta2":"Send us a message →",
+  "about.eyebrow":"About us","about.title":"Transparency, and you always come first","about.cta1":"Message us on WhatsApp","about.cta2":"Send us a message →",
   "about.p1":"For us, insurance is about trust. We walk you through your options in plain language, show you exactly what you're paying for, and only recommend a plan if it's truly the right fit for you and your family.",
   "about.p2":"When you work with us, you get honest answers, no pressure, and a team in your corner long after you enroll.",
   "about.f1":"Agency licensed in 29 states","about.states":"Alabama, Arizona, Arkansas, California, Florida, Georgia, Indiana, Iowa, Kentucky, Louisiana, Maryland, Michigan, Mississippi, Missouri, Nevada, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Pennsylvania, South Carolina, Tennessee, Texas, Utah, Virginia, West Virginia, Wisconsin, Wyoming",
   "about.f3":"Languages",
-  "contact.eyebrow":"Let's talk","contact.book":"Book a consultation","contact.title":"Ready for coverage that feels easy?",
-  "contact.sub":"Send a few details and we'll reach out within one business day. It's free, and there's no obligation.",
-  "contact.where":"Serving you by phone or Zoom in 29 states",
+  "contact.eyebrow":"Let's talk","contact.book":"Message us on WhatsApp","contact.title":"Ready for coverage that feels easy?",
+  "contact.sub":"Message us on WhatsApp and we'll reply fast. Or send a few details and we'll reach out within one business day. It's free, and there's no obligation.",
+  "contact.where":"Serving you by WhatsApp or phone in 29 states",
+  "contact.tel":"Calls:",
   "form.name":"Full name","form.phone":"Phone","form.email":"Email","form.interest":"I'm interested in",
   "form.i1":"Health insurance","form.i2":"Supplemental protection","form.i3":"Life insurance","form.i4":"Not sure yet",
   "form.btn":"Request my free consult",
@@ -69,6 +70,10 @@ const META = {
       desc:"Agentes de seguros de salud y vida con licencia. Te ayudamos a comparar planes del Mercado ACA, planes privados y seguros de vida, en español y sin costo para ti."},
   en:{title:"Elevate Insurance Advisors — Health & Life Insurance",
       desc:"Licensed health and life insurance agents. Clear options, honest guidance, in Spanish and English, at no cost to you."}
+};
+const ARIA = {
+  es:{"fab.aria":"Escríbenos por WhatsApp"},
+  en:{"fab.aria":"Message us on WhatsApp"}
 };
 const MSG = {
   en:{people:(n)=>`Based on ${n} ${n===1?"person":"people"} · example logic only`,
@@ -115,6 +120,9 @@ function setLang(l){
   $$(".lang__btn").forEach(b=>{
     const on = b.dataset.lang===lang;
     b.classList.toggle("is-active",on); b.setAttribute("aria-pressed",on);
+  });
+  $$("[data-i18n-aria]").forEach(el=>{
+    const v = ARIA[lang][el.dataset.i18nAria]; if(v) el.setAttribute("aria-label",v);
   });
   document.title = META[lang].title;
   const md = $('meta[name="description"]'); if(md) md.setAttribute("content",META[lang].desc);
@@ -219,9 +227,9 @@ $("#contactForm").addEventListener("submit",e=>{
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(m.subj)}&body=${encodeURIComponent(body)}`;
 });
 
-/* ===== Booking links: main CTAs open the Zoom scheduler in a new tab ===== */
-const BOOKING_URL = "https://scheduler.zoom.us/kenneth-espinosa-y20qz6/1-hour-call";
-$$("a[data-book]").forEach(a=>{a.href=BOOKING_URL;a.target="_blank";a.rel="noopener";});
+/* ===== WhatsApp links: main CTAs open a prefilled WhatsApp chat in a new tab ===== */
+const WHATSAPP_URL = "https://wa.me/14079541534?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20seguros%20de%20salud";
+$$("a[data-book]").forEach(a=>{a.href=WHATSAPP_URL;a.target="_blank";a.rel="noopener";});
 
 $("#year").textContent = new Date().getFullYear();
 
