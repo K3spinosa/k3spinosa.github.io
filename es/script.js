@@ -1,5 +1,5 @@
 /* ===== Config — edit these ===== */
-const CONTACT_EMAIL = "kenneth@elevateinsadvisors.com"; // form opens a pre-filled email to this address
+const CONTACT_EMAIL = "info@elevateinsadvisors.com"; // form opens a pre-filled email to this address
 
 /* ===== Spanish-first site =====
    Spanish lives in the HTML itself (captured below as ES).
