@@ -1,5 +1,5 @@
 /* ===== Config — edit these ===== */
-const CONTACT_EMAIL = "info@elevateinsadvisors.com"; // form opens a pre-filled email to this address
+const CONTACT_EMAIL = "info@elevateinsadvisors.com"; // "send by email" link opens a pre-filled email to this address
 
 /* ===== Spanish-first site =====
    Spanish lives in the HTML itself (captured below as ES).
@@ -9,7 +9,7 @@ const EN = {
   "hero.eyebrow":"Licensed agents · Health &amp; life insurance",
   "hero.title":"Coverage that finally <em>makes sense</em>.",
   "hero.sub":"Insurance shouldn't feel like homework. We compare plans from top carriers, explain them in plain language, and help you pick what fits your family and your budget.",
-  "hero.cta1":"Message us on WhatsApp","hero.cta2":"Try the quick estimate",
+  "hero.cta1":"Request a meeting","hero.cta2":"Try the quick estimate",
   "hero.b1":"Licensed &amp; appointed","hero.b2":"No cost to you","hero.b3":"Multiple carriers",
   "hero.lang.t":"Se habla español","hero.lang":"Help in Spanish or English","hero.badge":"Licensed in 29 states",
   "promise.kicker":"Our promise","promise.title":"Your coverage, made simple",
@@ -33,10 +33,10 @@ const EN = {
   "est.type.aca":"ACA Marketplace","est.type.private":"Private health plan","est.btn":"Show my estimate",
   "est.result":"Illustrative monthly estimate","est.empty":"Enter your ages and income to see your estimate.",
   "est.l1":"Tax credit estimated from your income","est.l2":"Medicaid and private-plan guidance when it fits","est.l3":"Real quotes in Spanish or English","est.after":"ACA Marketplace, after tax credit",
-  "est.income":"Annual household income","est.income.help":"Your expected income for the coverage year (MAGI). Used to estimate Marketplace tax credits.","est.next":"Get your real quote on WhatsApp",
+  "est.income":"Annual household income","est.income.help":"Your expected income for the coverage year (MAGI). Used to estimate Marketplace tax credits.","est.next":"Request your real quote",
   "est.disclaimer":"<strong>Illustrative estimate only — not a quote or offer of coverage.</strong> Actual premiums depend on your location, income, plan, carrier, tobacco use, and eligibility for subsidies. Actual subsidies depend on your location, the plans available to you, and your final income for the year. Tax-credit math uses the 2025 federal poverty guidelines and the IRS 2026 applicable-percentage table (the enhanced credits expired after 2025).",
   "how.title":"Simple from start to finish",
-  "how.s1.title":"We chat","how.s1.text":"Send us a WhatsApp message, no rush. You share your needs, doctors, and budget — we listen.",
+  "how.s1.title":"We chat","how.s1.text":"Message us on WhatsApp or request a meeting, no rush. You share your needs, doctors, and budget — we listen.",
   "how.s2.title":"We find your options","how.s2.text":"We compare plans across carriers and walk you through the best matches, trade-offs included.",
   "how.s3.title":"You're covered","how.s3.text":"We handle the paperwork and enrollment, then stay available for questions all year.",
   "life.eyebrow":"Life insurance","life.title":"Protect the people who count on you","life.sub":"Peace of mind that your family is taken care of, whatever life brings.",
@@ -47,18 +47,18 @@ const EN = {
   "life.c3.title":"Final Expense","life.c3.text":"Smaller, simple policies that cover funeral costs so your loved ones aren't burdened.",
   "life.c3.t1":"Simplified approval","life.c3.t2":"Fixed premiums",
   "values.v1":"Transparency","values.v2":"You come first","values.v3":"No pressure","values.v4":"All year long",
-  "about.eyebrow":"About us","about.title":"Transparency, and you always come first","about.cta1":"Message us on WhatsApp","about.cta2":"Send us a message →",
+  "about.eyebrow":"About us","about.title":"Transparency, and you always come first","about.cta1":"Request a meeting","about.cta2":"or message us on WhatsApp →",
   "about.p1":"For us, insurance is about trust. We walk you through your options in plain language, show you exactly what you're paying for, and only recommend a plan if it's truly the right fit for you and your family.",
   "about.p2":"When you work with us, you get honest answers, no pressure, and a team in your corner long after you enroll.",
   "about.f1":"Agency licensed in 29 states","about.states":"Alabama, Arizona, Arkansas, California, Florida, Georgia, Indiana, Iowa, Kentucky, Louisiana, Maryland, Michigan, Mississippi, Missouri, Nevada, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Pennsylvania, South Carolina, Tennessee, Texas, Utah, Virginia, West Virginia, Wisconsin, Wyoming",
   "about.f3":"Languages",
   "contact.eyebrow":"Let's talk","contact.book":"Message us on WhatsApp","contact.title":"Ready for coverage that feels easy?",
-  "contact.sub":"Message us on WhatsApp and we'll reply fast. Or send a few details and we'll reach out within one business day. It's free, and there's no obligation.",
+  "contact.sub":"Request a meeting with the form and we'll confirm the time. Prefer to write directly? Message us on WhatsApp and we'll reply fast. It's free, and there's no obligation.",
   "contact.where":"Serving you by WhatsApp or phone in 29 states",
   "contact.tel":"Calls:",
-  "form.name":"Full name","form.phone":"Phone","form.email":"Email","form.interest":"I'm interested in",
-  "form.i1":"Health insurance","form.i2":"Supplemental protection","form.i3":"Life insurance","form.i4":"Not sure yet",
-  "form.btn":"Request my free consult",
+  "meet.title":"Request a meeting","meet.lead":"Tell us which day and time work best and we'll confirm on WhatsApp.",
+  "meet.name":"Name","meet.phone":"Phone / WhatsApp","meet.email":"Email","meet.opt1":"(optional)","meet.opt2":"(optional)",
+  "meet.when":"Preferred day &amp; time","meet.msg":"Message","meet.btn":"Send request on WhatsApp","meet.alt":"or send it by email",
   "form.note":"By submitting, you agree to be contacted about insurance options. Please don't include sensitive health or financial details.",
   "footer.role":"Licensed insurance agency · Health &amp; life",
   "footer.lic":"Agency licensed in AL, AZ, AR, CA, FL, GA, IN, IA, KY, LA, MD, MI, MS, MO, NV, NJ, NM, NC, OH, OK, PA, SC, TN, TX, UT, VA, WV, WI, WY",
@@ -70,6 +70,10 @@ const META = {
       desc:"Agentes de seguros de salud y vida con licencia. Te ayudamos a comparar planes del Mercado ACA, planes privados y seguros de vida, en español y sin costo para ti."},
   en:{title:"Elevate Insurance Advisors — Health & Life Insurance",
       desc:"Licensed health and life insurance agents. Clear options, honest guidance, in Spanish and English, at no cost to you."}
+};
+const PH = {
+  es:{"meet.when.ph":"Ej.: martes por la tarde, después de las 5 p. m."},
+  en:{"meet.when.ph":"e.g., Tuesday afternoon, after 5 pm"}
 };
 const ARIA = {
   es:{"fab.aria":"Escríbenos por WhatsApp"},
@@ -84,10 +88,12 @@ const MSG = {
       cliff:`Above 400% of the poverty level there's no Marketplace tax credit in 2026, so a <a href="#private-plans">private health plan</a> may be the better fit. Let's compare both.`,
       zero:"Your expected contribution is higher than this benchmark estimate, so no tax credit applies.",
       privLabel:"Private health plan estimate", privNote:"Tax credits apply only to Marketplace plans",
-      ok:"Opening your email app… if nothing happens, email us directly.",
-      missing:"Please fill in name, phone, and a valid email.",
-      noaddr:"Demo mode: set CONTACT_EMAIL in script.js to enable sending.",
-      subj:"Free consult request", body:["Name","Phone","Email","Interested in"]},
+      missing:"Please fill in your name, phone / WhatsApp, and preferred day & time.",
+      badEmail:"Please check your email address (it's optional).",
+      okWa:"Opening WhatsApp… if it doesn't open, message us at (407) 954-1534.",
+      okMail:"Opening your email app… if nothing happens, write to info@elevateinsadvisors.com.",
+      intro:"Hi, I'd like to request a meeting.", subj:"Meeting request",
+      labels:["Name","Phone","Email","Preferred time","Message"]},
   es:{people:(n)=>`Basado en ${n} ${n===1?"persona":"personas"} · lógica de ejemplo`,
       fplPct:(n,p)=>`Hogar de ${n} · aprox. ${p}% del nivel federal de pobreza`,
       mo:"/mes", credit:(c)=>`Crédito fiscal est.: ${c}/mes`, noCredit:"Sin crédito fiscal con este ingreso",
@@ -96,10 +102,12 @@ const MSG = {
       cliff:`Por encima del 400% del nivel de pobreza no hay crédito fiscal del Mercado en 2026, así que un <a href="#private-plans">plan de salud privado</a> podría convenirte más. Comparemos ambos.`,
       zero:"Tu aporte esperado es mayor que este estimado de referencia, así que no aplica crédito fiscal.",
       privLabel:"Estimado de plan de salud privado", privNote:"Los créditos fiscales solo aplican a planes del Mercado",
-      ok:"Abriendo tu app de correo… si no pasa nada, escríbenos directamente.",
-      missing:"Por favor completa tu nombre, teléfono y un correo válido.",
-      noaddr:"Modo demo: define CONTACT_EMAIL en script.js para habilitar el envío.",
-      subj:"Solicitud de consulta gratis", body:["Nombre","Teléfono","Correo","Interesado en"]}
+      missing:"Por favor completa tu nombre, teléfono / WhatsApp y el día y horario preferido.",
+      badEmail:"Revisa tu correo electrónico (es opcional).",
+      okWa:"Abriendo WhatsApp… si no se abre, escríbenos al (407) 954-1534.",
+      okMail:"Abriendo tu app de correo… si no pasa nada, escríbenos a info@elevateinsadvisors.com.",
+      intro:"Hola, quiero solicitar una reunión.", subj:"Solicitud de reunión",
+      labels:["Nombre","Teléfono","Email","Horario preferido","Mensaje"]}
 };
 
 const $ = (s,r=document)=>r.querySelector(s);
@@ -124,6 +132,11 @@ function setLang(l){
   $$("[data-i18n-aria]").forEach(el=>{
     const v = ARIA[lang][el.dataset.i18nAria]; if(v) el.setAttribute("aria-label",v);
   });
+  $$("[data-i18n-ph]").forEach(el=>{
+    const v = PH[lang][el.dataset.i18nPh]; if(v) el.placeholder = v;
+  });
+  const st = $("#formStatus"); if(st){ st.textContent=""; st.className="form__status"; }
+  if(typeof updateMeetingEmail==="function") updateMeetingEmail();
   document.title = META[lang].title;
   const md = $('meta[name="description"]'); if(md) md.setAttribute("content",META[lang].desc);
   if(!$("#result").hidden) renderEstimate();
@@ -208,24 +221,50 @@ function renderEstimate(){
 }
 $("#calc").addEventListener("submit",e=>{e.preventDefault();renderEstimate();});
 
-/* ===== Contact form (front-end only: opens a mailto draft) ===== */
-$("#contactForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const f = e.target, st = $("#formStatus"), m = MSG[lang];
-  const name=f.name.value.trim(), phone=f.phone.value.trim(), email=f.email.value.trim();
-  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  [f.name,f.phone,f.email].forEach(i=>i.classList.remove("invalid"));
-  if(!name||!phone||!okEmail){
-    if(!name)f.name.classList.add("invalid"); if(!phone)f.phone.classList.add("invalid"); if(!okEmail)f.email.classList.add("invalid");
-    st.className="form__status err"; st.textContent=m.missing; return;
+/* ===== Meeting request form (front-end only) =====
+   Validates name, phone and preferred time, then opens a WhatsApp chat
+   (or an email draft) prefilled with the request in the current language. */
+const WA_NUMBER = "14079541534";
+const mf = $("#meeting"), mailLink = $("#meetingEmail");
+const mFields = { name:$("#m-name"), phone:$("#m-phone"), email:$("#m-email"), when:$("#m-when"), msg:$("#m-msg") };
+const val = k => mFields[k].value.trim();
+function meetingText(){
+  const m = MSG[lang], L = m.labels, lines = [m.intro, `${L[0]}: ${val("name")}`, `${L[1]}: ${val("phone")}`];
+  if(val("email")) lines.push(`${L[2]}: ${val("email")}`);
+  lines.push(`${L[3]}: ${val("when")}`);
+  if(val("msg")) lines.push(`${L[4]}: ${val("msg")}`);
+  return lines.join("\n");
+}
+const meetingWaUrl = () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(meetingText())}`;
+const meetingMailUrl = () => `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(MSG[lang].subj)}&body=${encodeURIComponent(meetingText())}`;
+function updateMeetingEmail(){ if(mailLink) mailLink.href = meetingMailUrl(); }
+function validateMeeting(){
+  const st = $("#formStatus"), m = MSG[lang];
+  const req = ["name","phone","when"], missing = req.filter(k=>!val(k));
+  const badEmail = val("email") && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val("email"));
+  Object.values(mFields).forEach(i=>{ i.classList.remove("invalid"); i.removeAttribute("aria-invalid"); });
+  missing.forEach(k=>{ mFields[k].classList.add("invalid"); mFields[k].setAttribute("aria-invalid","true"); });
+  if(badEmail){ mFields.email.classList.add("invalid"); mFields.email.setAttribute("aria-invalid","true"); }
+  if(missing.length || badEmail){
+    st.className = "form__status err"; st.textContent = missing.length ? m.missing : m.badEmail;
+    (missing.length ? mFields[missing[0]] : mFields.email).focus();
+    return false;
   }
-  if(CONTACT_EMAIL.includes("[")){ st.className="form__status err"; st.textContent=m.noaddr; return; }
-  const interest = f.interest.options[f.interest.selectedIndex].text;
-  const b = m.body;
-  const body = `${b[0]}: ${name}\n${b[1]}: ${phone}\n${b[2]}: ${email}\n${b[3]}: ${interest}`;
-  st.className="form__status"; st.textContent=m.ok;
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(m.subj)}&body=${encodeURIComponent(body)}`;
+  return true;
+}
+Object.values(mFields).forEach(i=>i.addEventListener("input",()=>{ i.classList.remove("invalid"); i.removeAttribute("aria-invalid"); updateMeetingEmail(); }));
+mf.addEventListener("submit",e=>{
+  e.preventDefault();
+  if(!validateMeeting()) return;
+  const st = $("#formStatus"); st.className = "form__status"; st.textContent = MSG[lang].okWa;
+  window.open(meetingWaUrl(), "_blank", "noopener");
 });
+mailLink.addEventListener("click",e=>{
+  updateMeetingEmail();
+  if(!validateMeeting()){ e.preventDefault(); return; }
+  const st = $("#formStatus"); st.className = "form__status"; st.textContent = MSG[lang].okMail;
+});
+updateMeetingEmail();
 
 /* ===== WhatsApp links: main CTAs open a prefilled WhatsApp chat in a new tab ===== */
 const WHATSAPP_URL = "https://wa.me/14079541534?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20seguros%20de%20salud";

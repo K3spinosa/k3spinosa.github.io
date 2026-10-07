@@ -282,4 +282,15 @@ input.invalid{border-color:#b3321a;background:#FFF7F5}
 .footer{padding-bottom:6rem}
 @media (max-width:480px){.wa-fab{width:56px;height:56px}.wa-fab .wa-ic{width:28px;height:28px}}
 
+/* ===== /es additions: meeting request form ===== */
+.form__head{margin-bottom:.1rem}
+.form__title{font-size:1.25rem;margin:0 0 .2rem}
+.form__lead{margin:0;font-size:.88rem;color:var(--muted)}
+textarea{font:inherit;font-size:.95rem;padding:.8rem .95rem;border:1.5px solid #CBD5E1;border-radius:12px;background:#fff;color:var(--ink);width:100%;resize:vertical;min-height:5.5rem}
+textarea:focus{border-color:var(--teal-a11y)}
+textarea:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+input.invalid,textarea.invalid{border-color:#b3321a;background:#FFF7F5}
+.form__alt{justify-self:center;font-size:.9rem;font-weight:600;color:var(--navy);text-underline-offset:4px;margin-top:-.2rem}
+.btn > svg:not(.wa-ic){width:1.15em;height:1.15em;flex:none}
+
 @media (prefers-reduced-motion:reduce){.marquee__track{animation:none}html{scroll-behavior:auto}.btn,.wa-fab{transition:none}}
